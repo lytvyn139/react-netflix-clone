@@ -1,5 +1,6 @@
 import React from 'react';
 import { Faq, OptForm } from '../components';
+
 import faqsData from '../fixtures/faqs';
 
 export function FaqsContainer() {
@@ -15,12 +16,12 @@ export function FaqsContainer() {
         ))}
       </Faq.Frame>
 
-      {/* <OptForm>
+      <OptForm>
+      <OptForm.Text>Ready to watch? Enter your email to create or restart your membership.</OptForm.Text>
         <OptForm.Input placeholder="Email address" />
-        <OptForm.Button>Try it now</OptForm.Button>
+        <OptForm.Button>TRY IT NOW</OptForm.Button>
         <OptForm.Break />
-        <OptForm.Text>Ready to watch? Enter your email to create or restart your membership.</OptForm.Text>
-      </OptForm> */}
+      </OptForm>
     </Faq>
   );
 }
