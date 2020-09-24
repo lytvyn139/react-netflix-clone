@@ -37,7 +37,7 @@ export function FooterContainer() {
         </Footer.Column>
       </Footer.Row>
       <Footer.Break />
-      <Footer.Text>Netflix Chicago clone ❤️</Footer.Text>
+      <Footer.Text>Netflix Chicago clone </Footer.Text>
     </Footer>
   );
 }
