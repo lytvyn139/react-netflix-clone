@@ -13,7 +13,7 @@ export const Inner = styled.div`
   display: flex;
   padding: 70px 45px;
   flex-direction: column;
-  max-width: 650px;
+  max-width: 800px;
   margin: auto;
 `;
 
@@ -34,7 +34,7 @@ export const Item = styled.div`
   color: white;
   margin-bottom: 10px;
   margin: auto;
-  max-width: 670px;
+  max-width: 800px;
   width: 100%;
   d
   &:first-of-type {
@@ -46,11 +46,12 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  margin-bottom: 1px;
+  margin-bottom: 3px;
   font-size: 26px;
   font-weight: normal;
   background: #303030;
   padding: 0.8em 1.2em 0.8em 1.2em;
+  
   user-select: none;
   align-items: center;
 
@@ -70,7 +71,7 @@ export const Header = styled.div`
 
 export const Body = styled.div`
   max-height: 1200px;
-  transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+  transition: max-height 0.s cubic-bezier(0.5, 0, 0.1, 1);
   font-size: 26px;
   font-weight: normal;
   line-height: normal;
@@ -78,6 +79,7 @@ export const Body = styled.div`
   padding: 0.8em 2.2em 0.8em 1.2em;
   white-space: pre-wrap;
   user-select: none;
+  margin-bottom: 10px;
 
   @media (max-width: 600px) {
     font-size: 16px;
