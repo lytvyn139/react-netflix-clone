@@ -6,6 +6,7 @@ import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
 
 export function BrowseContainer({ slides }) {
+    const [searchTerm, setSearchTerm] = useState("");
     const [profile, setProfile] = useState({});
     const [loading, setLoading] = useState(true);
     const { firebase } = useContext(FirebaseContext);
@@ -36,8 +37,16 @@ export function BrowseContainer({ slides }) {
                         <Header.TextLink>Series</Header.TextLink>
                         <Header.TextLink>Films</Header.TextLink>
                     </Header.Group>
-                    {/* PROFILE  */}
+
                     <Header.Group>
+                        {/* SEARCH  */}
+                        <Header.Search
+                            searchTerm={searchTerm}
+                            setSearchTerm={setSearchTerm}
+                        ></Header.Search>
+                        {/* SEARCH  */}
+
+                        {/* PROFILE  */}
                         <Header.Profile>
                             <Header.Picture src={user.photoURL} />
                             <Header.Dropdown>
@@ -57,9 +66,11 @@ export function BrowseContainer({ slides }) {
                                         Sign Out
                                     </Header.TextLink>
                                 </Header.Group>
+                                {/* DROP  */}
                             </Header.Dropdown>
                         </Header.Profile>
                     </Header.Group>
+                    {/* PROFILE  */}
                 </Header.Frame>
 
                 <Header.Feature>
@@ -71,6 +82,7 @@ export function BrowseContainer({ slides }) {
                         seeks connection as he walks the streets of Gotham City.
                         ⁠{" "}
                     </Header.Text>
+                    <Header.PlayButton>Play</Header.PlayButton>
                 </Header.Feature>
             </Header>
         </>
