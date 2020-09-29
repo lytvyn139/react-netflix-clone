@@ -110,7 +110,7 @@ export const Item = styled.div`
         margin-left: 56px;
 
         @media (max-width: 1000px) {
-            margin-left: 30px;
+            margin-left: 5px;
         }
     }
 
@@ -118,7 +118,7 @@ export const Item = styled.div`
         margin-right: 56px;
 
         @media (max-width: 1000px) {
-            margin-right: 30px;
+            margin-right: 5px;
         }
     }
 `;

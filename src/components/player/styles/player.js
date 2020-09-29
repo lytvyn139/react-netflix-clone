@@ -25,6 +25,13 @@ export const Inner = styled.div`
         height: 100%;
         width: 100%;
     }
+
+    @media (max-width: 500px) {
+        video {
+            height: 100%;
+            width: 90%;
+        }
+    }
 `;
 
 export const Close = styled.button`
@@ -33,31 +40,37 @@ export const Close = styled.button`
     top: 15px;
     width: 22px;
     height: 22px;
-    opacity: 0.4;
-    background-color: black;
+    background-color: transparent;
     border: 0;
     cursor: pointer;
-
+    color: #ffffff;
     &:hover {
-        opacity: 1;
+        opacity: 0.5;
+        color: #ffffff;
     }
 
     &:before,
     &:after {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
         left: 10px;
         top: 0;
-        content: " ";
+        content: "";
         height: 22px;
         width: 2px;
-        background-color: #333;
+        background-color: #ffffff;
+        color: #ffffff;
     }
 
     &:before {
         transform: rotate(45deg);
+        color: #ffffff;
     }
     &:after {
         transform: rotate(-45deg);
+        color: #ffffff;
     }
 `;
 
