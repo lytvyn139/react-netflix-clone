@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Card, Header, Loading } from "../components";
+import { Card, Header, Loading, Player } from "../components";
 import { SelectProfileContainer } from "./profiles";
 import { FirebaseContext } from "../context/firebase";
 import { FooterContainer } from "./footer";
+import Fuse from "fuse.js";
 
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
@@ -26,6 +27,25 @@ export function BrowseContainer({ slides }) {
     useEffect(() => {
         setSlideRows(slides[category]);
     }, [slides, category]);
+
+    /* SEARCH BAR */
+    useEffect(() => {
+        const fuse = new Fuse(slideRows, {
+            keys: ["data.description", "data.title", "data.genre"]
+        });
+        const results = fuse.search(searchTerm).map(({ item }) => item);
+
+        if (
+            slideRows.length > 0 &&
+            searchTerm.length > 3 &&
+            results.length > 0
+        ) {
+            setSlideRows(results);
+        } else {
+            setSlideRows(slides[category]);
+        }
+    }, [searchTerm]);
+    /* SEARCH BAR */
 
     return profile.displayName ? (
         <>
@@ -127,10 +147,10 @@ export function BrowseContainer({ slides }) {
                             ))}
                         </Card.Entities>
                         <Card.Feature category={category}>
-                            {/* <Player>
+                            <Player>
                                 <Player.Button />
                                 <Player.Video src="/videos/bunny.mp4" />
-                            </Player> */}
+                            </Player>
                         </Card.Feature>
                     </Card>
                 ))}
