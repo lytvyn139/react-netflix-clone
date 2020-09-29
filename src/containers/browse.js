@@ -114,12 +114,17 @@ export function BrowseContainer({ slides }) {
 
                 <Header.Feature>
                     <Header.FeatureCallOut>
-                        Watch Joker Now
+                        Watch Snowpiercer
                     </Header.FeatureCallOut>
                     <Header.Text>
-                        Forever alone in a crowd, failed comedian Arthur Fleck
-                        seeks connection as he walks the streets of Gotham City.
-                        ⁠{" "}
+                        After an attempt to stop global warming via climate
+                        engineering catastrophically backfires, creating a new
+                        ice age in 2014, the remnants of humanity have taken to
+                        a circumnavigational train, the Snowpiercer, run by
+                        recluse transportation magnate Wilford. By 2031, the
+                        passengers on the train have become segregated, with the
+                        elite in the extravagant front cars and the poor in
+                        squalid tail compartments controlled by armed guards.
                     </Header.Text>
                     <Header.PlayButton>Play</Header.PlayButton>
                 </Header.Feature>

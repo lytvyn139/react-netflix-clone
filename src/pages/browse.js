@@ -1,5 +1,5 @@
 import React from "react";
-//import { ProtectedRoute } from "../helpers/routes";
+import { ProtectedRoute } from "../helpers/routes";
 import { BrowseContainer } from "../containers/browse";
 import { useContent } from "../hooks";
 import { selectionFilter } from "../utils";
