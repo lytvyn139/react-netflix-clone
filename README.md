@@ -63,4 +63,4 @@ IURII LYTVYN
 
 ## Screenshot
 
-![](src/img/demo.png)
+![](src/demo.png)
